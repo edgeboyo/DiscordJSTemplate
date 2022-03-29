@@ -1,0 +1,26 @@
+{
+  "name": "discordjstemplate",
+  "version": "0.0.1",
+  "description": "\"A quick and easy template to start working on your own DiscordJS Bot implementation\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgeboyo/DiscordJSTemplate.git"
+  },
+  "keywords": [
+    "Discord",
+    "DiscordJS"
+  ],
+  "author": "edgeboyo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgeboyo/DiscordJSTemplate/issues"
+  },
+  "homepage": "https://github.com/edgeboyo/DiscordJSTemplate#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
