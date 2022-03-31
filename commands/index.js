@@ -61,7 +61,7 @@ function setCommands(client, commands) {
     return { name, description };
   });
 
-  client.application.command.set(strippedCommands);
+  client.application.commands.set(strippedCommands);
 }
 
 function setUpCommands(client) {
