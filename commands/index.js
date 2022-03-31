@@ -3,7 +3,7 @@
 //      - description - description of the commands
 //      - handler - function that handles the command with client and interaction as variables
 
-const ping = require("./ping");
+const { ping } = require("./ping");
 
 const commands = [{ name: "ping", description: "Ping command", handler: ping }];
 
@@ -20,9 +20,10 @@ function validateCommands() {
   const verificationReturn = commands.every((command) => {
     const { name, description, handler } = command;
 
-    if (!(name instanceof String)) {
-      // add check for name uniqueness
-      throw new ValidationError(`${name} is not a string`);
+    if (!(typeof name === "string")) {
+      throw new ValidationError(
+        `${name} is not a string. Is ${typeof name} instead`
+      );
     }
 
     if (uniqueNames.includes(name)) {
@@ -31,15 +32,15 @@ function validateCommands() {
       );
     }
 
-    if (!(description instanceof String)) {
+    if (!(typeof description === "string")) {
       throw new ValidationError(
-        `In command ${name} - ${description} is not a string`
+        `In command ${name} - ${description} is not a string. Is ${typeof description} instead`
       );
     }
 
-    if (!(handler instanceof Function)) {
+    if (!(typeof handler === "function")) {
       throw new ValidationError(
-        `In command ${name} - The handler field needs to be a Function with client and interaction fields`
+        `In command ${name} - The handler field needs to be a Function with client and interaction fields. Is ${typeof handler} instead`
       );
     }
 

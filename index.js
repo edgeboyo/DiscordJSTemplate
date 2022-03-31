@@ -10,7 +10,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 client.once("ready", () => {
   console.log("Ready! Validating command config!");
 
-  validateCommands(e);
+  validateCommands();
 
   console.log("Commands validated. Registering...");
 
