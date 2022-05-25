@@ -1,4 +1,4 @@
-function commandName(client, interaction) {
+async function commandName(client, interaction) {
   // do a thing
   // return will not be used
 }
